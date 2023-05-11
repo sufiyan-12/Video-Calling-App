@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="#EDEDED"
+            android:layout_marginHorizontal="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/contryCodeTV"
+                android:text="+91"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:paddingStart="16dp"
+                android:layout_width="60dp"
+                android:layout_height="40dp"/>
+            <EditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:hint="Enter Phone number"
+                android:inputType="number"
+                android:maxLength="10"
+                tools:ignore="TextFields" />
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/otpEditText"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:hint="Enter otp"
+                android:inputType="number"
+                android:maxLength="10"
+                tools:ignore="TextFields" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/otpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Get Otp"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Profile"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/videoCallBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Initiate Video Call"/>
+    </LinearLayout>
+</LinearLayout>
